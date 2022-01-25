@@ -19,8 +19,7 @@ body {
   padding: 15px;
   align-items: center;
   justify-content: center;
-  min-height: min-content;
-  max-height: min-content;
+  max-height: max-content;
   width: 75%;
   max-width: 365px;
   margin: auto;
@@ -59,8 +58,12 @@ body {
 
 /*footer*/
 .attribution {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
   opacity: 25%;
   font-family: Outfit;
   font-size: 11px;
-  text-align: center;
 }
