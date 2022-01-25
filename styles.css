@@ -22,7 +22,7 @@ body {
   justify-content: center;
   max-height: max-content;
   width: 75%;
-  max-width: 365px;
+  max-width: 360px;
   margin: auto;
   text-align: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.01), 0 6px 20px 0 rgba(0, 0, 0, 0.01);
@@ -33,8 +33,8 @@ body {
   max-height: 100%;
   max-width: 100%;
   border-radius: 25px;
-  margin: auto;
-  margin-bottom: 30px;
+  margin: auto auto 30px;
+  padding: 5px;
 }
 
 .part1 {
