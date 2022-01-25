@@ -1,70 +1,78 @@
-a {
-  color: hsl(228, 45%, 44%);
+:root {
+  --bodyBackground: hsl(212, 45%, 89%);
+  --headingText: hsl(218, 44%, 22%);
+  --intructionsText: hsl(220, 15%, 55%);
+  --linkText: hsl(228, 45%, 44%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-style: clamp(12px, 1.75vw, 18px);
 }
 
 body {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  font-size: 15px;
-  background-color: hsl(212, 45%, 89%);
+  background-color: var(--bodyBackground);
+  font-family: Outfit, Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+body.superCenter {
+  min-height: 100vh;
+}
+
+.superCenter {
+  display: grid;
+  place-items: center;
+}
+
+a {
+  color: var(--linkText);
 }
 
 .white_box {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 25px;
-  padding: 15px;
-  align-items: center;
-  justify-content: center;
-  max-height: max-content;
-  width: 75%;
-  max-width: 360px;
-  margin: auto;
-  text-align: center;
+  display: flex;
+  flex-flow: column;
+  gap: 0.6em;
+
+  width: min(75%, 365px);
+  padding: 1em;
+  border-radius: 1.5em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.01), 0 6px 20px 0 rgba(0, 0, 0, 0.01);
+  background-color: white;
+
+  text-align: center;
 }
 
-.qr_img {
-  height: 100%;
-  max-height: 100%;
-  max-width: 100%;
-  border-radius: 25px;
-  margin: auto auto 30px;
-  padding: 5px;
+.white_box img {
+  width: 100%;
+  border-radius: 1.5rem;
 }
 
-.part1 {
-  font-family: Outfit;
+.white_box h1 {
+  padding-inline: 0.3em;
+
+  color: var(--headingText);
+  font-size: 1.4rem;
+
   font-weight: 700;
-  font-size: 1.75em;
-  color: hsl(218, 44%, 22%);
-  padding: 0px 9px 0px;
-  margin-bottom: 20px;
-  text-align: center;
 }
 
-.part2 {
-  font-family: Outfit;
+.white_box p {
+  color: var(--intructionsText);
   font-weight: 400;
-  font-size: 1.25em;
-  color: hsl(220, 15%, 55%);
-  text-align: center;
-  padding: 0px 15px 0px;
-  margin-bottom: 45px;
 }
 
 /*footer*/
 .attribution {
   position: fixed;
-  left: 0;
+  inset-inline: 0;
   bottom: 0;
-  width: 100%;
+
   text-align: center;
-  opacity: 25%;
-  font-family: Outfit;
-  font-size: 11px;
+  font-size: 0.8rem;
+
+  opacity: 50%;
 }
